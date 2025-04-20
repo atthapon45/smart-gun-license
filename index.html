@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Smart Gun Licensing System</title>
-  <link rel="stylesheet" href="styles.css">
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -12,69 +11,33 @@
       margin: 0;
       padding: 0;
     }
-<nav style="background-color: #0f172a; padding: 1rem; position: sticky; top: 0; z-index: 999;">
-  <div style="max-width: 960px; margin: auto; display: flex; justify-content: space-between; align-items: center;">
-    <div style="color: white; font-weight: bold;">SmartGunLicense</div>
-    <div>
-      <a href="#steps" style="color: #1e90ff; margin: 0 1rem; text-decoration: none;">ขั้นตอน</a>
-      <a href="#contact" style="color: #1e90ff; margin: 0 1rem; text-decoration: none;">ติดต่อ</a>
-    </div>
-  </div>
-</nav>
 
-    header {
-      <!-- Hero Section -->
-<section style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.youtube.com%2Fchannel%2FUC-tfqNaMC4r_x0L3gkua9NQ&psig=AOvVaw2fQzYLZJCSjgRSycokSLnC&ust=1745208177302000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCKD3yp7d5YwDFQAAAAAdAAAAABAE') center/cover no-repeat; color: white; padding: 100px 20px; text-align: center;">
-  <h1 style="font-size: 3rem; margin-bottom: 1rem;">ระบบขออนุญาตปืนอัจฉริยะ</h1>
-  <p style="font-size: 1.2rem; max-width: 600px; margin: auto;">เปลี่ยนขั้นตอนราชการให้ทันสมัย โปร่งใส และปลอดภัย ด้วยเทคโนโลยี</p>
-  <a href="#steps" style="display: inline-block; margin-top: 2rem; padding: 0.8rem 2rem; background-color: #1e90ff; color: white; border-radius: 6px; text-decoration: none; font-weight: bold;">เริ่มยื่นคำขอ</a>
-</section>
+    nav {
+      background-color: #0f172a;
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
 
+    nav div {
+      max-width: 960px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      color: #1e90ff;
+      margin: 0 1rem;
+      text-decoration: none;
     }
 
     section {
       padding: 2rem;
       max-width: 960px;
       margin: auto;
-    }
-<section id="register" style="background-color: #ffffff; padding: 3rem 1rem;">
-  <div style="max-width: 600px; margin: auto;">
-    <h2 style="text-align: center; color: #0f172a; margin-bottom: 2rem;">ลงทะเบียนยื่นขอใบอนุญาต (จำลอง)</h2>
-
-    <form style="display: flex; flex-direction: column; gap: 1.5rem;">
-      <div>
-        <label>ชื่อ - นามสกุล:</label><br>
-        <input type="text" placeholder="กรอกชื่อ-นามสกุล" required
-               style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px;">
-      </div>
-
-      <div>
-        <label>แนบไฟล์บัตรประชาชน (จำลอง):</label><br>
-        <input type="file" accept="image/*,.pdf"
-               style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px;">
-      </div>
-
-      <div>
-        <label>ยืนยันตัวตนด้วย ThaiD (จำลอง):</label><br>
-        <button type="button"
-                onclick="alert('ระบบจะจำลองการยืนยันผ่านแอป ThaiD')"
-                style="width: 100%; padding: 12px; background-color: #1e90ff; color: white; border: none; border-radius: 6px; font-weight: bold;">
-          ยืนยันผ่านแอป ThaiD
-        </button>
-      </div>
-
-      <div style="text-align: center;">
-        <button type="submit"
-                style="padding: 12px 30px; background-color: #0f172a; color: white; border: none; border-radius: 6px;">
-          ส่งคำขอ
-        </button>
-      </div>
-    </form>
-  </div>
-</section>
-
-    h1, h2 {
-      color: #0f172a;
     }
 
     .step {
@@ -87,105 +50,140 @@
 
     footer {
       text-align: center;
-      padding: 1rem;
+      padding: 2rem 1rem;
       background-color: #0f172a;
       color: white;
-      font-size: 0.8rem;
+    }
+
+    input, button, textarea {
+      font-family: inherit;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>ระบบขออนุญาตครอบครองอาวุธปืนอัจฉริยะ</h1>
-    <p>Smart Gun Licensing System for Thailand</p>
-  </header>
-
-  <section>
-    <h2>ขั้นตอนการดำเนินการ</h2>
-
-    <div class="step">
-      <h3>1. ลงทะเบียนและยืนยันตัวตน</h3>
-      <p>ยืนยันด้วยบัตรประชาชนและ Face ID ผ่านระบบออนไลน์</p>
-    </div>
-
-    <div class="step">
-      <h3>2. ยื่นคำขอใบอนุญาต (ป.3)</h3>
-      <p>กรอกข้อมูล เลือกประเภทปืน และแนบเอกสารผ่านพอร์ทัล</p>
-    </div>
-
-    <div class="step">
-      <h3>3. ตรวจสอบประวัติด้วย AI</h3>
-      <p>เชื่อมข้อมูลกับตำรวจ, ศาล, สาธารณสุข ตรวจสอบแบบอัตโนมัติ</p>
-    </div>
-
-    <div class="step">
-      <h3>4. สอบทฤษฎีและปฏิบัติ</h3>
-      <p>เรียนออนไลน์ + ทดสอบสนามยิงปืนที่ได้รับการรับรอง</p>
-    </div>
-
-    <div class="step">
-      <h3>5. ออกใบอนุญาต ป.3 (Digital)</h3>
-      <p>ได้รับเอกสารผ่าน QR Code และเก็บใน Digital Wallet</p>
-    </div>
-
-    <div class="step">
-      <h3>6. เลือกร้านค้าและออก ป.4</h3>
-      <p>ซื้อปืนที่อนุญาต เชื่อมหมายเลขปืนกับระบบกลาง</p>
-    </div>
-
-    <div class="step">
-      <h3>7. ติดตาม/ต่ออายุ/แจ้งเตือนอัจฉริยะ</h3>
-      <p>ระบบ AI ตรวจพฤติกรรม และแจ้งเตือนความเสี่ยง</p>
-    </div>
-
+  <!-- Hero Section -->
+  <section style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1601544941440-53a1df2fc63a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1280&q=80') center/cover no-repeat; color: white; padding: 100px 20px; text-align: center;">
+    <h1 style="font-size: 3rem; margin-bottom: 1rem;">ระบบขออนุญาตปืนอัจฉริยะ</h1>
+    <p style="font-size: 1.2rem; max-width: 600px; margin: auto;">เปลี่ยนขั้นตอนราชการให้ทันสมัย โปร่งใส และปลอดภัย ด้วยเทคโนโลยี</p>
+    <a href="#register" style="display: inline-block; margin-top: 2rem; padding: 0.8rem 2rem; background-color: #1e90ff; color: white; border-radius: 6px; text-decoration: none; font-weight: bold;">เข้าสู่ระบบ</a>
   </section>
-<section id="steps">
-  <h2>ขั้นตอนการดำเนินการ</h2>
-  <!-- (ขั้นตอนทั้งหมดอยู่ตรงนี้) -->
-</section>
 
-<section id="contact">
-  <h2>ติดต่อเรา</h2>
-  <p>ทีมพัฒนาโครงการ Smart Gun License</p>
-  <p>Email: smartgun@yourdomain.com</p>
-</section>
+  <!-- Navbar -->
+  <nav>
+    <div>
+      <div style="color: white; font-weight: bold;">SmartGunLicense</div>
+      <div>
+        <a href="#steps">ขั้นตอน</a>
+        <a href="#register">ลงทะเบียน</a>
+        <a href="#contact">ติดต่อ</a>
+      </div>
+    </div>
+  </nav>
 
+  <!-- Step-by-step section -->
+  <section id="steps">
+    <h2>ขั้นตอนการดำเนินการ</h2>
+    <div class="step"><h3>1. ลงทะเบียนและยืนยันตัวตน</h3><p>ยืนยันด้วยบัตรประชาชนและ Face ID ผ่านระบบออนไลน์</p></div>
+    <div class="step"><h3>2. ยื่นคำขอใบอนุญาต (ป.3)</h3><p>กรอกข้อมูล เลือกประเภทปืน และแนบเอกสารผ่านพอร์ทัล</p></div>
+    <div class="step"><h3>3. ตรวจสอบประวัติด้วย AI</h3><p>เชื่อมข้อมูลกับตำรวจ, ศาล, สาธารณสุข ตรวจสอบแบบอัตโนมัติ</p></div>
+    <div class="step"><h3>4. สอบทฤษฎีและปฏิบัติ</h3><p>เรียนออนไลน์ + ทดสอบสนามยิงปืนที่ได้รับการรับรอง</p></div>
+    <div class="step"><h3>5. ออกใบอนุญาต ป.3 (Digital)</h3><p>ได้รับเอกสารผ่าน QR Code และเก็บใน Digital Wallet</p></div>
+    <div class="step"><h3>6. เลือกร้านค้าและออก ป.4</h3><p>ซื้อปืนที่อนุญาต เชื่อมหมายเลขปืนกับระบบกลาง</p></div>
+    <div class="step"><h3>7. ติดตาม/ต่ออายุ/แจ้งเตือนอัจฉริยะ</h3><p>ระบบ AI ตรวจพฤติกรรม และแจ้งเตือนความเสี่ยง</p></div>
+  </section>
+
+  <!-- ลงทะเบียนจำลอง -->
+  <section id="register" style="background-color: #ffffff; padding: 3rem 1rem;">
+    <div style="max-width: 600px; margin: auto;">
+      <h2 style="text-align: center; color: #0f172a; margin-bottom: 2rem;">ลงทะเบียนยื่นขอใบอนุญาต (จำลอง)</h2>
+      <form style="display: flex; flex-direction: column; gap: 1.5rem;">
+        <div>
+          <label>ชื่อ - นามสกุล:</label><br>
+          <input type="text" placeholder="กรอกชื่อ-นามสกุล" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px;">
+        </div>
+        <div>
+          <label>แนบไฟล์บัตรประชาชน (จำลอง):</label><br>
+          <input type="file" accept="image/*,.pdf" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px;">
+        </div>
+        <div>
+          <label>ยืนยันตัวตนด้วย ThaiD (จำลอง):</label><br>
+          <button type="button" onclick="alert('ระบบจะจำลองการยืนยันผ่านแอป ThaiD')" style="width: 100%; padding: 12px; background-color: #1e90ff; color: white; border: none; border-radius: 6px; font-weight: bold;">ยืนยันผ่านแอป ThaiD</button>
+        </div>
+        <div style="text-align: center;">
+          <button type="submit" style="padding: 12px 30px; background-color: #0f172a; color: white; border: none; border-radius: 6px;">ส่งคำขอ</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- แสดงขั้นตอนอีกครั้ง (สรุป flow) -->
+  <section style="background-color: #f8f9fa; padding: 3rem 1rem;">
+    <div style="max-width: 800px; margin: auto;">
+      <h2 style="text-align: center; color: #0f172a;">ขั้นตอนทั้งหมด</h2>
+      <ol style="line-height: 2; font-size: 1.1rem; padding-left: 1.2rem;">
+        <li>เข้าสู่ระบบ / ยืนยันตัวตนผ่าน ThaiD</li>
+        <li>ยื่นคำขอใบอนุญาต (ป.3) + แนบเอกสาร</li>
+        <li>ตรวจสอบประวัติอัตโนมัติ + ทดสอบความรู้</li>
+        <li>ออกใบ ป.3 พร้อม QR Code</li>
+        <li>เลือกซื้อปืนจากร้านที่ได้รับอนุญาต</li>
+        <li>ออกใบ ป.4 และผูกข้อมูลปืนกับเจ้าของ</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ปุ่มดาวน์โหลดใบ ป.3 / ป.4 จำลอง -->
+  <section style="text-align: center; padding: 2rem;">
+    <h3>ดาวน์โหลดใบอนุญาต (จำลอง)</h3>
+    <a href="https://www.orimi.com/pdf-test.pdf" target="_blank" style="display: inline-block; margin: 1rem; padding: 10px 20px; background-color: #1e90ff; color: white; border-radius: 6px; text-decoration: none;">ดาวน์โหลดใบ ป.3</a>
+    <a href="https://www.orimi.com/pdf-test.pdf" target="_blank" style="display: inline-block; margin: 1rem; padding: 10px 20px; background-color: #0f172a; color: white; border-radius: 6px; text-decoration: none;">ดาวน์โหลดใบ ป.4</a>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>ติดต่อเรา</h2>
+    <p>ทีมพัฒนา Smart Gun License</p>
+    <p>Email: smartgun@yourdomain.com</p>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    © 2025 จัดทำโดยระบบจำลอง TCD Tactical | เวอร์ชันทดลอง
+    <div style="max-width: 960px; margin: auto;">
+      <h3>Smart Gun Licensing System</h3>
+      <p>ติดต่อทีมพัฒนา: smartgun@yourdomain.com</p>
+      <div style="margin: 1rem 0;">
+        <a href="#steps" style="color: #1e90ff; margin: 0 10px; text-decoration: none;">ขั้นตอน</a>
+        <a href="#register" style="color: #1e90ff; margin: 0 10px; text-decoration: none;">ลงทะเบียน</a>
+        <a href="#" style="color: #1e90ff; margin: 0 10px; text-decoration: none;">กลับด้านบน</a>
+      </div>
+      <div style="margin-top: 1rem;">
+        <a href="https://youtube.com" target="_blank" title="YouTube" style="margin: 0 10px;">
+          <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" style="width: 24px; height: 24px;">
+        </a>
+        <a href="https://facebook.com" target="_blank" title="Facebook" style="margin: 0 10px;">
+          <img src="https://cdn-icons-png.flaticon.com/512/1384/1384053.png" alt="Facebook" style="width: 24px; height: 24px;">
+        </a>
+        <a href="https://line.me" target="_blank" title="LINE" style="margin: 0 10px;">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111710.png" alt="LINE" style="width: 24px; height: 24px;">
+        </a>
+      </div>
+      <p style="font-size: 0.8rem; margin-top: 2rem;">© <span id="year"></span> พัฒนาโดยทีม Tactical Dev | โครงการทดลองเท่านั้น</p>
+    </div>
   </footer>
-<footer style="background-color: #0f172a; color: white; padding: 2rem 1rem; text-align: center;">
-  <div style="max-width: 960px; margin: auto;">
-    <h3 style="margin-bottom: 1rem;">Smart Gun Licensing System</h3>
 
-    <p style="margin-bottom: 0.5rem;">ติดต่อทีมพัฒนา: smartgun@yourdomain.com</p>
+  <!-- Scripts -->
+  <script>
+    // แสดงปีใน footer อัตโนมัติ
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-    <div style="margin: 1rem 0;">
-      <a href="#steps" style="color: #1e90ff; margin: 0 10px; text-decoration: none;">ขั้นตอน</a>
-      <a href="#contact" style="color: #1e90ff; margin: 0 10px; text-decoration: none;">ติดต่อ</a>
-      <a href="#" style="color: #1e90ff; margin: 0 10px; text-decoration: none;">กลับด้านบน</a>
-    </div>
-
-    <div style="margin-top: 1rem;">
-      <a href="https://youtube.com" target="_blank" title="YouTube" style="margin: 0 10px;">
-        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" style="width: 24px; height: 24px;">
-      </a>
-      <a href="https://facebook.com" target="_blank" title="Facebook" style="margin: 0 10px;">
-        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384053.png" alt="Facebook" style="width: 24px; height: 24px;">
-      </a>
-      <a href="https://line.me" target="_blank" title="LINE" style="margin: 0 10px;">
-        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111710.png" alt="LINE" style="width: 24px; height: 24px;">
-      </a>
-    </div>
-
-    <p style="font-size: 0.8rem; margin-top: 2rem;">© <span id="year"></span> พัฒนาโดยทีม Tactical Dev | โครงการทดลองเท่านั้น</p>
-  </div>
-</footer>
-
-<script>
-  // อัปเดตปีปัจจุบันอัตโนมัติ
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+    // ฟอร์มลงทะเบียนจำลอง
+    document.querySelector("#register form").addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("ลงทะเบียนสำเร็จ! ระบบจะนำคุณไปยังหน้ายื่นคำขอ...");
+      location.href = "#steps";
+    });
+  </script>
 
 </body>
 </html>
+
