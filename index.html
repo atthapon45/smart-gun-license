@@ -37,6 +37,41 @@
       max-width: 960px;
       margin: auto;
     }
+<section id="register" style="background-color: #ffffff; padding: 3rem 1rem;">
+  <div style="max-width: 600px; margin: auto;">
+    <h2 style="text-align: center; color: #0f172a; margin-bottom: 2rem;">ลงทะเบียนยื่นขอใบอนุญาต (จำลอง)</h2>
+
+    <form style="display: flex; flex-direction: column; gap: 1.5rem;">
+      <div>
+        <label>ชื่อ - นามสกุล:</label><br>
+        <input type="text" placeholder="กรอกชื่อ-นามสกุล" required
+               style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px;">
+      </div>
+
+      <div>
+        <label>แนบไฟล์บัตรประชาชน (จำลอง):</label><br>
+        <input type="file" accept="image/*,.pdf"
+               style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px;">
+      </div>
+
+      <div>
+        <label>ยืนยันตัวตนด้วย ThaiD (จำลอง):</label><br>
+        <button type="button"
+                onclick="alert('ระบบจะจำลองการยืนยันผ่านแอป ThaiD')"
+                style="width: 100%; padding: 12px; background-color: #1e90ff; color: white; border: none; border-radius: 6px; font-weight: bold;">
+          ยืนยันผ่านแอป ThaiD
+        </button>
+      </div>
+
+      <div style="text-align: center;">
+        <button type="submit"
+                style="padding: 12px 30px; background-color: #0f172a; color: white; border: none; border-radius: 6px;">
+          ส่งคำขอ
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
 
     h1, h2 {
       color: #0f172a;
